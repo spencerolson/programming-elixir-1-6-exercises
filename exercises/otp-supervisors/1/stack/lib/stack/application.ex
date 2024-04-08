@@ -8,8 +8,8 @@ defmodule Stack.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {Stack.Stash, [1, 2, 3]},
-      {Stack.Server, nil}
+      {Stash.Server, [1, 2, 3]},
+      Stack.Server
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
